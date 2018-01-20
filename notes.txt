@@ -1,0 +1,17 @@
+# NOTES
+
+# chrome.webRequests
+https://developer.chrome.com/extensions/webRequest
+
+# ICONS
+icon-1.png: http://www.clker.com/cliparts/9/0/f/c/1368461450149421512556k-digital-modem-icon-th.png
+icon-2.png: https://www.flaticon.com/free-icon/modem_99558
+
+# Tones
+https://www.seventhstring.com/resources/notefrequencies.html
+
+# Web Sniffer
+https://chrome.google.com/webstore/detail/web-sniffer/ndfgffclcpdbgghfgkmooklaendohaef?hl=en
+
+
+

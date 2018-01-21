@@ -24,7 +24,7 @@ With this in mind, I often find myself opening the dev console in Chrome and wat
 
 To do this, I decided to try and make a Chrome extension that turned HTTP request into sounds: Requests-Audio!
 
-#### How To
+#### How
 
 First, a simple primer on how to make Chrome extensions: <a href="https://robots.thoughtbot.com/how-to-make-a-chrome-extension">https://robots.thoughtbot.com/how-to-make-a-chrome-extension</a>
 
@@ -35,3 +35,40 @@ That documentation provided a good background on what I thought I might need to 
 
 I copied the files of this Chrome extension (<a href="https://stackoverflow.com/questions/14543896/where-does-chrome-store-extensions">how to</a>) into a new directory and started looking at the content and background scripts. I realized that since I wouldn't be displaying anything, and instead just playing audio sounds, then I wouldn't actually need any content scripts and I could accomplish all of this with just a background script.
 
+* Create a series of callbacks for various web request events, based on the <a href="https://developer.chrome.com/extensions/webRequest
+"><chrome.webRequest documentation</a>, including onBeforeRequest, onCompleted, and onErrorOccurred.
+* Create an audio generator using the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Web Audio API</a>.
+* Assign a set of <a href="https://www.seventhstring.com/resources/notefrequencies.html
+">frequency tones</a> to each of the seven main HTTP requests (and one for an error)
+  * GET
+  * POST
+  * PUT
+  * HEAD
+  * DELETE
+  * PATCH
+  * OPTIONS
+* Define the callback handler functions to start and stop the audio generator tones when any of the HTTP requests are triggered (before requests, completed, or errored).
+
+I also coded a basic enable/disable function for when the extension icon is clicked, in order to turn the sounds on or off. And there's also some event checking in there to only trigger audio tones on HTTP requests that are associated with the active browser tab.
+
+And that's Requests-Audio! 
+
+#### Check It Out!
+To try it out, just download the directory and <a href="https://developer.chrome.com/extensions/getstarted#unpacked">install it in Chrome as an unpacked extension</a>. An icon should appear in your browser extensions list. Just click on it to enable Requests-Audio, click a tab with a website and try refreshing the website to trigger all of the web requests needed to serve up that page. You should start hearing sounds! You can also open the Developer Tools in Chrome and look at the Network tab to see the web requests happen in real time with the audio.
+
+I recorded audio of some popular websites loading up on a page refresh...
+
+* <a href="https://s3.amazonaws.com/github-engelsjk/chrome-extension-request-audio/request-audio-google.mp3" target="_blank">Audio Clip - Google</a>
+* <a href="https://s3.amazonaws.com/github-engelsjk/chrome-extension-request-audio/request-audio-twitter.mp3" target="_blank">Audio Clip - Twitter</a>
+* <a href="https://s3.amazonaws.com/github-engelsjk/chrome-extension-request-audio/request-audio-cnn.mp3" target="_blank">Audio Clip - CNN</a>
+* <a href="https://s3.amazonaws.com/github-engelsjk/chrome-extension-request-audio/request-audio-foxnews.mp3" target="_blank">Audio Clip - Fox News</a>
+* <a href="https://s3.amazonaws.com/github-engelsjk/chrome-extension-request-audio/request-audio-popurls.mp3" target="_blank">Audio Clip - Popurls</a>
+* <a href="https://s3.amazonaws.com/github-engelsjk/chrome-extension-request-audio/request-audio-youtube-video.mp3" target="_blank">Audio Clip - Youtube Video</a>
+
+Somewhat of a surprise, it all kind of sounds like a 56k modem! I'm not sure if this is insightful or obvious. Either way, it really gives you a sense of how much network activity is being used by various websites to do everything it "needs" to do, like serve up HTML, images, videos, submit user forms, log user activity, etc. Depending on the website, it can be...a lot.
+
+#### What's Next?
+
+I'm really glad I turned this idea into a reality! While the sounds can quickly become annoying, I think it's a really important way to educate or make people aware of how much goes on behind the scenes of different websites. I hope it empowers people to pay attention to how the web works: how webpages are generated, how actions are logged, how ads are served, 
+
+Some updates to this extension could include anything from visualizing the network activity along with the sounds, adding distinguishing sounds (instruments? volume? pitch? etc?) for more detail of the web requests, like size of file/payload received, the type of the request (text, script, image, xhr, etc), or maybe the domain of the requested URL. There are many options, but it's a balance of capturing more detail in the data vs providing a limited array of sounds that the listener is able to process.

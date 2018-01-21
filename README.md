@@ -53,7 +53,7 @@ I also coded a basic enable/disable function for when the extension icon is clic
 
 And that's Requests-Audio! 
 
-#### Check It Out!
+#### Check It Out
 To try it out, just download the directory and <a href="https://developer.chrome.com/extensions/getstarted#unpacked">install it in Chrome as an unpacked extension</a>. An icon should appear in your browser extensions list. Just click on it to enable Requests-Audio, click a tab with a website and try refreshing the website to trigger all of the web requests needed to serve up that page. You should start hearing sounds! You can also open the Developer Tools in Chrome and look at the Network tab to see the web requests happen in real time with the audio.
 
 I recorded audio of some popular websites loading up on a page refresh...

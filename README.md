@@ -24,3 +24,14 @@ With this in mind, I often find myself opening the dev console in Chrome and wat
 
 To do this, I decided to try and make a Chrome extension that turned HTTP request into sounds: Requests-Audio!
 
+#### How To
+
+First, a simple primer on how to make Chrome extensions: <a href="https://robots.thoughtbot.com/how-to-make-a-chrome-extension">https://robots.thoughtbot.com/how-to-make-a-chrome-extension</a>
+
+Next, I knew that I'd be dealing with web requests, so I did a quick read of the Chrome extension documentation on web requests: <a href="https://developer.chrome.com/extensions/webRequest">https://developer.chrome.com/extensions/webRequest
+</a>
+
+That documentation provided a good background on what I thought I might need to do between content and background scripts in order to actually trigger actions (like sounds) from web request activity. But I also did a search for similar Chrome extensions that either did the same thing or something similar. While I didn't find anything related to converting web request activity to sounds, I did find a Chrome extension that showed all web request activity in a seperate tab: <a href="https://chrome.google.com/webstore/detail/web-sniffer/ndfgffclcpdbgghfgkmooklaendohaef?hl=en">Web-Sniffer</a>.
+
+I copied the files of this Chrome extension (<a href="https://stackoverflow.com/questions/14543896/where-does-chrome-store-extensions">how to</a>) into a new directory and started looking at the content and background scripts. I realized that since I wouldn't be displaying anything, and instead just playing audio sounds, then I wouldn't actually need any content scripts and I could accomplish all of this with just a background script.
+

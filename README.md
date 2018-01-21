@@ -18,11 +18,11 @@ Because of this, I've had some small prototypes in mind for converting various "
 
 To that end, it was both a blessing and a curse to learn how web sites work. Less so on the frontend (like HTML, CSS, browser rendering, etc) and more on the backend, like how web requests are sent and received, how the application/transport/internet/network layers work, etc. I looked under the hood once, and now I keep peaking behind every interesting web site or web service I come across. This often leads to finding new and interesting API's (including undocumented API's), web scraping for useful information or simply just learning more about the structure of a popular web site.
 
-### Requests-Audio
+### Request-Audio
 
 With this in mind, I often find myself opening the dev console in Chrome and watching the network activity of the websites I use. I had the idea a while back to make that network activity more visible to the user, so you would know how often a video from Netflix is being buffered, or how many Javascript libraries are being loaded by CNN, or just how many separate files and webcalls make up a webpage. Basically all of the activity behind the scenes to show what it takes to run the websites that we all use.
 
-To do this, I decided to try and make a Chrome extension that turned HTTP request into sounds: Requests-Audio!
+To do this, I decided to try and make a Chrome extension that turned HTTP request into sounds: Request-Audio!
 
 #### How
 
@@ -51,7 +51,7 @@ I copied the files of this Chrome extension (<a href="https://stackoverflow.com/
 
 I also coded a basic enable/disable function for when the extension icon is clicked, in order to turn the sounds on or off. And there's also some event checking in there to only trigger audio tones on HTTP requests that are associated with the active browser tab.
 
-And that's Requests-Audio! 
+And that's Request-Audio! 
 
 #### Check It Out
 To try it out, just download the directory and <a href="https://developer.chrome.com/extensions/getstarted#unpacked">install it in Chrome as an unpacked extension</a>. An icon should appear in your browser extensions list. Just click on it to enable Requests-Audio, click a tab with a website and try refreshing the website to trigger all of the web requests needed to serve up that page. You should start hearing sounds! You can also open the Developer Tools in Chrome and look at the Network tab to see the web requests happen in real time with the audio.

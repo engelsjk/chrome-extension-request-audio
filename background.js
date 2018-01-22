@@ -5,7 +5,8 @@ var on = false;
 var request_tracker = {};
 
 // ### ENABLE REQUEST AUDIO ### //
-chrome.browserAction.onClicked.addListener(function() {
+//chrome.browserAction.onClicked.addListener(function() {
+chrome.browserAction.onClicked(function() {
 	on = !on;
 	if(!on){
 		console.log('stop!')

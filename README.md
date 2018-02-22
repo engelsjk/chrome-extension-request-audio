@@ -75,6 +75,6 @@ Some updates to this extension could include anything from visualizing the netwo
 
 #### Misc.
 
-Working on this project reminded me of a Chrome extension I'd heard about a <a href="https://www.fastcompany.com/3046507/send-a-link-to-your-deskmate-via-sound-with-a-new-google-extension">while back</a>. Tone is a Chrome extension that lets you share URL links with other computers nearby (with Tone also installed) using encoded data in an audio tone.
+Working on this project reminded me of a Chrome extension I'd heard about a <a href="https://www.fastcompany.com/3046507/send-a-link-to-your-deskmate-via-sound-with-a-new-google-extension">while back</a>. <a href="https://chrome.google.com/webstore/detail/google-tone/nnckehldicaciogcbchegobnafnjkcne">Google Tone</a> is a Chrome extension that lets you share URL links with other computers nearby (with Tone also installed) using encoded data in an audio tone.
 
 

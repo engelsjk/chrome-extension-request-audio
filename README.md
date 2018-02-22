@@ -72,3 +72,9 @@ Somewhat of a surprise, it all kind of sounds like a 56k modem! I'm not sure if 
 I'm really glad I turned this idea into a reality! While the sounds can quickly become annoying, I think it's a really important way to educate or make people aware of how much goes on behind the scenes of different websites. I hope it empowers people to pay attention to how the web works: how webpages are generated, how actions are logged, how ads are served, 
 
 Some updates to this extension could include anything from visualizing the network activity along with the sounds, adding distinguishing sounds (instruments? volume? pitch? etc?) for more detail of the web requests, like size of file/payload received, the type of the request (text, script, image, xhr, etc), or maybe the domain of the requested URL. There are many options, but it's a balance of capturing more detail in the data vs providing a limited array of sounds that the listener is able to process.
+
+#### Misc.
+
+Working on this project reminded me of a Chrome extension I'd heard about a <a href="https://www.fastcompany.com/3046507/send-a-link-to-your-deskmate-via-sound-with-a-new-google-extension">while back</href>. Tone is a Chrome extension that lets you share URL links with other computers nearby (with Tone also installed) using encoded data in an audio tone.
+
+

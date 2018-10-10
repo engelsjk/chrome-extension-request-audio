@@ -1,4 +1,4 @@
-# chrome-extension-request-audio
+# Request Audio
 
 <img src="icons/icon-2.png" width="48">
 

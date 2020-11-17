@@ -5,8 +5,7 @@ var on = false;
 var request_tracker = {};
 
 // ### ENABLE REQUEST AUDIO ### //
-//chrome.browserAction.onClicked.addListener(function() {
-chrome.browserAction.onClicked(function() {
+chrome.browserAction.onClicked.addListener(function() {
 	on = !on;
 	if(!on){
 		console.log('stop!')
@@ -147,7 +146,7 @@ function Audio(){
 
 		/* VCO */
 		var vco = context.createOscillator();
-		vco.type = vco.SINE;
+		vco.type = "sine";
 		vco.frequency.value = tone;
 		vco.start(0);
 
